@@ -54,6 +54,7 @@ passport.use(new GoogleStrategy({
                 return done(err);
             }
             profile.gmailProfile = res.data;
+            console.log('Gmail profile:', profile.gmailProfile);
             done(null, profile);
         });
     }

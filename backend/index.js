@@ -273,7 +273,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/auth/google',
-    passport.authenticate('google', { scope: ['email', 'profile','https://www.googleapis.com/auth/gmail.readonly'] })
+    passport.authenticate('google', { scope: ['email', 'profile','https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.compose'] })
 );
 
 app.get('/auth/google/callback',
